@@ -1,0 +1,89 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+
+    <title>Nova Receita - FoodFy</title>
+    
+
+{% endblock %}
+
+{% block content %}       
+        
+        <h4>Editar Receita</h4>
+        <span>
+        <a href="/admin/recipes" class='btn-voltar'>voltar</a>
+        <span class="look-modal--user">Visualizar modo USER<input type="checkbox" name="" id="check-modal--user"></span>  
+        </span>
+
+        <div id= "modal-admin--only" class='modal-form'>
+            <div class="form-edit">
+                <form action="/admin/recipes?_method=PUT" method="POST">
+
+                    {%include 'admin/fields.njk' %}
+                
+                    <input type="hidden" name="id" value="{{recipe.id}}">
+
+                </form>
+                
+
+                <form id='form-delete' action="/admin/recipes?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value="{{recipe.id}}">
+                    <button type="submit" id="btn-delete">Deletar</button>
+                </form>
+            </div>
+
+            {% include 'admin/scriptDel.njk' %}
+            <div>
+                <img src="{{recipe.image}}" alt="" class="image-edit">
+                <img src="/assets/chef.png" alt="" class="image-edit">
+            </div>
+        </div>
+
+
+
+
+{# block for apresentation mode user #}
+
+        <div id= "modal-admin--user" class="modal-overlay--admin">
+            <div class="recipe-apresentation">
+                    <img src="{{recipe.image}}" alt="" class="">
+                    <h5>Receita: {{recipe.title}}</h5>
+                    <p class="author__recipe">por {{recipe.author}}</p>
+                </div>
+
+                <div class="recipes-overlay">
+                    
+                    <div class="recipes-ingredients">
+                        <h6><strong>Ingredientes </strong></h6>
+
+                    <ul class="ingredients">
+                        {% for item in recipe.ingredients %}    
+                            
+                                <li>{{item}}</li>
+                            
+                        {% endfor %}
+                    </ul>    
+
+                    </div>                
+
+                    <div class="recipes-preparation">
+                        <h6><strong>Modo de preparo</strong></h6>
+
+                    <ul class="preparation">
+                        {% for item in recipe.preparation %}    
+                                <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    </div>
+
+                    <div class="recipes-infoadd">
+                        <h6><strong>Informações adicionais</strong></h6>
+
+                        <p class="infoadd">{{recipe.infoadd}}</p>
+                    </div> 
+
+                </div>
+            </div>
+
+{% endblock %}

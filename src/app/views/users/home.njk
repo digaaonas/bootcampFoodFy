@@ -1,0 +1,53 @@
+{% extends "users/layout.njk" %}
+
+{% block content %}
+
+    <div class="presentation">
+        <h1>As melhores receitas</h1>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+        <img src="/assets/chef.png" alt="">
+    </div>
+
+    <section>
+        <h2>Mais acessadas</h2>
+
+        <div class="most__accessed">
+            <div class="most__accessed_recipes">
+                <img src="assets/asinhas.png" alt="" class="img__most_accessed">
+                <h5 class="name__recipe">Asinha</h5>
+                <p>Asinha de frango</p>
+            </div>
+
+            <div class="most__accessed_recipes">
+                <img src="assets/burger.png" alt="" class="img__most_accessed">
+                <p class="name__recipe">Burguer</p>
+                <p>Burguer Duplo</p>
+            </div>
+
+            <div class="most__accessed_recipes">
+                <img src="assets/doce.png" alt="" class="img__most_accessed">
+                <p class="name__recipe">Doce</p>
+                <p>Doce de leite</p>
+            </div>
+
+            <div class="most__accessed_recipes">
+                <img src="assets/espaguete.png" alt="" class="img__most_accessed">
+                <p class="name__recipe">Espaguete</p>
+                <p>Espaguete na Chapa</p>
+            </div>
+
+            <div class="most__accessed_recipes">
+                <img src="assets/lasanha.png" alt="" class="img__most_accessed">
+                <p class="name__recipe">Lasanha</p>
+                <p>Lasanha a Bolonha</p>
+            </div>
+
+            <div class="most__accessed_recipes">
+                <img src="assets/pizza.png" alt="" class="img__most_accessed">
+                <p class="name__recipe">Pizza</p>
+                <p>Pizza a Moda</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

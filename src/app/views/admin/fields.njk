@@ -1,0 +1,91 @@
+                    <div class ='item'>
+                        <div>URL da Imagem</div>
+                        <div>
+                            <input type="text" name="image" value="{{recipe.image}}">
+                        </div>
+                    </div>
+
+                    <div class ='item'>
+                        <div>Título da Receita</div>
+                        <div>
+                            <input type="text" name="title" value="{{recipe.title}}">
+                        </div>
+                    </div>
+
+                    <div class ='item'>
+                        <div>Autor</div>
+                        <div>
+                            <input type="text" name="author" value="{{recipe.author}}">
+                        </div>
+                    </div>
+
+
+            {% if recipe.id >= 0 %}
+
+                    <div class ='item'>
+                        <div id='field-Ing'>Ingredientes</div>
+
+                {%for ingredients in recipe.ingredients %} 
+
+                        <div>
+                            <input class='input-list' type="text" name="ingredients" value="{{ingredients}}">
+                        </div>
+
+                {% endfor %}
+
+                        <div class='modal-span'>
+                            <span id="add-Ing">+</span>
+                        </div>
+                        </div>                  
+
+                        <div class ='item'>
+                            <div id='field-Prep'>Modo de Preparo</div>
+                    
+                {% for preparation in recipe.preparation %}
+
+                            <div>
+                                <input class='input-list' type="text" name="preparation" value="{{preparation}}">
+                            </div>
+
+                {% endfor %} 
+
+                        <div class='modal-span'>
+                            <span id="add-Prep">+</span>
+                        </div>
+                    </div>                  
+                    
+            {% else %}
+
+                    <div class ='item'>
+                        <div id='field-Ing'>Ingredientes</div>
+                        <div>
+                            <input class='input-list' type="text" name="ingredients" value="{{ingredients}}">
+                        </div>
+                        <div class='modal-span'>
+                            <span id="add-Ing">+</span>
+                        </div>
+                    </div>                  
+
+                    <div class ='item'>
+                        <div id='field-Prep'>Modo de Preparo</div>
+                        <div>
+                            <input class='input-list' type="text" name="preparation" value="{{preparation}}">
+                        </div>
+                        <div class='modal-span'>
+                        <span id="add-Prep">+</span>
+                        </div>
+                    </div>                  
+
+            {% endif %}
+
+            
+                    <div class ='item'>
+                        <div>Informações adicionais</div>
+                        <div>
+                            <textarea type="text" name="infoadd" >{{recipe.infoadd}}</textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit">Salvar</button>
+
+                

@@ -1,0 +1,39 @@
+{% extends "users/layout.njk" %}
+
+{% block head %}
+
+    <title>Receitas - FoodFy</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+    <h4>Sugestões do chefe</h4>
+
+    <section>
+        <div class="recipes__modal">
+
+        {% for recipe in item %}
+            <div class="recipes__one" id="{{recipe.image}}" onclick="window.location='/recipes/{{recipe.id}}'">
+                <img src="{{recipe.image}}" alt="" class="img__most_accessed">
+                <h5 class="name__recipe">{{recipe.title}}</h5>
+                <p class="author__recipe">por {{recipe.author}}</p>
+            </div>
+        {% endfor %}
+
+        </div>
+    </section>
+
+    <div class="modal__overlay">
+        <div class="modal">
+            <img src="" alt="" class="img__most_accessed">
+                
+                    <p class="name__recipe_modal"></p>
+                    <p class="author__recipe_modal"></p>                    
+                
+                    <a class="close-modal"><i class="material-icons">highlight_off</i></a>    
+        </div>
+    </div>
+
+{% endblock %}

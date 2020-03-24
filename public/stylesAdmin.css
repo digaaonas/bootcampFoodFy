@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0
+}
+
+/* ====== PAGE INDEX ===== */
+
+header {
+    background-color: black;
+    padding: 24px;
+}
+
+header img {
+    width: 100px;
+    position: relative;
+    left: 231px;
+    cursor: pointer;
+}
+
+.btn-newRecipe{
+    padding: 5px 8px 5px 8px;
+    text-decoration: none;
+    background-color: lightcoral;
+    border-radius: 16px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin: 32px ;
+    color: lightcyan;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+}
+
+.btn-voltar{
+    padding: 5px 8px 5px 8px;
+    text-decoration: none;
+    border-radius: 16px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    color: rgb(143, 32, 37);
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+    border-bottom: lightsalmon 2px inset;
+}
+
+
+h4{
+    padding: 32px 0px 0px 24px;
+    position: relative;
+    width: 70%;
+    left: 228px;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: bold Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+.recipes__modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    position: relative;
+    left: 230px;
+    padding-top: 40px;
+    
+}
+
+.recipes__one {
+    padding-bottom: 20px;
+    width: 500px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 20px;    
+
+}
+
+.recipes__one img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.recipes__one div {
+    padding: 16px;
+}
+
+.recipes__one div h5 {
+    position: relative;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.recipes__one div p {
+    padding-top: 5px;
+    position: relative;
+    opacity: .7;
+
+}
+
+.recipes__one div a {
+    text-decoration: none;
+    color: tomato;
+    padding: 3px 5px;
+    margin-top: 12px;
+    position: absolute;
+}
+
+.recipes__one a.btn-see.active {
+    transition: background-color 500ms ease-out;
+    background-color: rgb(248, 232, 232);
+    border-radius: 50px;
+}
+
+/* ===== FORM =====*/
+
+.modal-form{
+    padding: 20px;
+    position: absolute;
+    left: 228px;
+    display: grid;
+    grid-template-columns: 380px 380px;
+    background-color: white;
+    
+}
+
+section{
+    max-width: 350px;
+    margin: 0;
+}
+
+.form-edit, .form-create{
+    margin-top: 15px;
+    text-align: center;
+    width: 350px;
+    border: lightcoral 2px solid;
+    border-radius: 16px;
+}
+
+.item div:first-child{
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic bolder;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.item input, textarea{
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: tomato 1px solid;
+    text-decoration: none;
+    outline: none;
+    width: 80%;
+    max-width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.item textarea{
+    height: 80px;
+}
+
+.item .input-list{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#add-Prep, #add-Ing{
+   font-size: 13px;
+   font-weight: 1000;
+   border-radius: 20px;
+   padding: 0px 3px 0px 3px;
+   border: red 2px solid;
+   background-color: tomato;
+   transition: border;
+   cursor: pointer;
+}
+
+#add-Prep:hover, #add-Ing:hover{
+    transition: border 200ms ease;    
+    border: red 2px inset;
+}
+
+.item:first-child div:first-child{
+    margin-top: 24px;
+}
+
+.item .modal-span{
+    margin-bottom: 30px;
+}
+
+button{
+    color: black;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    border-radius: 16px;
+    background-color: rgb(250, 160, 160);
+    border: crimson 2px solid;
+    outline: none;
+    cursor: pointer;
+    width: 90%;
+    margin: 5px;
+    margin: 16px 0;
+
+}
+
+#btn-delete{
+    background-color: rgb(162, 0, 255);
+    border-color: black;
+    color: cornsilk;
+    opacity: .7;
+}
+
+#btn-delete:hover{
+    transition: opacity .7s ease-in;
+    opacity: 1;
+}
+
+/*===== IMAGE EDIT=====*/
+
+.image-edit{
+    border-radius: 24px;
+    margin: 14px;
+    width: 100%;
+}
+
+.image-edit:last-child{
+    position: relative;
+    left: 80%;
+    width: 40%;
+    top: 50%;
+}
+
+input[type=checkbox]{
+   width: 14px;
+   height: 14px;
+   margin-left: 20px;
+   margin-top: 5px;
+   box-shadow: 0 0 20px tomato;
+}
+
+.look-modal--user{
+    position: relative;
+    left: 80%;
+    border-radius: 16px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: bold Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    border-bottom: lightsalmon 2px inset;
+}
+
+/*=====MODAL-OVERLAY--ADMIN*/
+
+.modal-overlay--admin{
+    visibility: hidden;
+}
+
+.modal-overlay--admin.active{
+    visibility: visible;
+    background-color: white;
+    opacity:1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    animation: Modalvisible 4s ease forwards;
+   
+}
+
+@keyframes Modalvisible{
+    from {
+        opacity: 0;
+                
+    }
+    to{
+        opacity: 1;
+         
+    }
+}
+
+.modal-form.disactive{
+    visibility: hidden;
+    
+}
+
+/* ===== APRESENTATION RECIPES ====== */
+
+.recipe-apresentation, .recipes-ingredients, .recipes-preparation, .recipes-infoadd{
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 3vh;
+}
+
+.recipe-apresentation img{
+    width: 100%;
+    border-radius: 20px;    
+}
+
+.recipe-apresentation h5{
+    padding: 10px;
+    font-family: bold Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 28pt;
+}
+
+.recipe-apresentation p{
+    padding: 10px;
+    font-family: bold Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 16pt;
+    opacity: .6;
+    padding-top: 15px;
+}
+
+.recipes-ingredients, .recipes-preparation, .recipes-infoadd{
+    text-align: left;
+    margin-top: 0;
+}
+
+.recipes-ingredients h6, .recipes-preparation h6, .recipes-infoadd h6{
+    font-size: 22pt;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    
+}
+
+.recipes-ingredients ul, .recipes-preparation ul, .recipes-infoadd p{
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 5%;
+    font-size: 15pt;
+}
+
+.ingredients.disactive, .preparation.disactive, .infoadd.disactive{
+    visibility: hidden;
+    height: 0px;
+}
+
+/* ===Button====*/
+
+.btn-recall.active, .btn-expand.active{
+    visibility: visible;
+}
+
+.btn-recall, .btn-expand{
+    visibility: hidden;
+}
+
+.btn-recall, .btn-expand{
+    border: none;
+    width: 90px;
+    background-color: white;
+    font: italic bold 8pt Georgia;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .4;
+    
+}
+
+.btn-recall, .btn-recall.active{
+    margin-left: 10px;
+}
+
+.btn-expand, .btn-expand.active{
+    margin-left: -95px;
+}

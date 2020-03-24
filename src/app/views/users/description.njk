@@ -1,0 +1,61 @@
+{% extends "users/layout.njk" %}
+
+{% block head %}
+
+    <title>Receitas - FoodFy</title>
+       
+
+{% endblock %}
+
+{% block content %}       
+        
+            <div class="recipe-apresentation">
+                <img src="{{recipe.image}}" alt="" class="">
+                <h5>Receita: {{recipe.title}}</h5>
+                <p class="author__recipe">por {{recipe.author}}</p>
+            </div>
+
+            <div class="recipes-overlay">
+                
+                <div class="recipes-ingredients">
+                    <h6><strong>Ingredientes </strong>
+                    <button class= "btn-recall active" id='btn-recall-ing'>esconder</button>
+                    <button class= "btn-expand" id='btn-expand-ing'>mostrar</button>
+                    </h6>
+
+                <ul class="ingredients">
+                    {% for item in recipe.ingredients %}    
+                        
+                            <li>{{item}}</li>
+                        
+                    {% endfor %}
+                </ul>    
+
+                </div>                
+
+                <div class="recipes-preparation">
+                    <h6><strong>Modo de preparo</strong>
+                    <button class= "btn-recall active" id='btn-recall-prep'>esconder</button>
+                    <button class= "btn-expand" id='btn-expand-prep'>mostrar</button>
+                    </h6>
+
+                <ul class="preparation">
+                    {% for item in recipe.preparation %}    
+                            <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+
+                </div>
+
+                <div class="recipes-infoadd">
+                    <h6><strong>Informações adicionais</strong>
+                    <button class= "btn-recall active" id='btn-recall-info'>esconder</button>
+                    <button class= "btn-expand" id='btn-expand-info'>mostrar</button>
+                    </h6>
+
+                    <p class="infoadd">{{recipe.infoadd}}</p>
+                </div> 
+
+            </div>
+
+{% endblock %}

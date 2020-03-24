@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/stylesAdmin.css">
+
+    {% block head %}
+
+        <title>FoodFy Admin</title>
+    
+    {% endblock%}
+        
+    </head>
+
+    <body>
+        <header>
+            <img src="/assets/logoAdmin.png" alt="" onclick="window.location='/admin/recipes'">
+            
+        </header>
+
+    {% block content %}
+
+    {% endblock %}    
+        
+        <script src="/scriptAdmin.js"></script>
+
+    </body>
+
+    </html>
